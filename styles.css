@@ -22,6 +22,10 @@ body {
   background-attachment: fixed;
 }
 
+.flex-container {
+  display: flex;
+}
+
 .container {
   width: 100vw;
   min-height: 100vh;
@@ -30,6 +34,7 @@ body {
   justify-content: space-between;
   padding: 2rem;
   background: url('noise.png');
+  flex: 1 0 0;
 }
 
 .top-bar {
@@ -67,6 +72,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  flex: 1 0 0;
 }
 
 .hero-photo {
