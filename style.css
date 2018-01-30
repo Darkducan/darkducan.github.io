@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14pt;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+body {
+  color: #e2e2e2;
+  background-color: #1f1d2c;
+  background-image: url('data:image/svg+xml,%3Csvg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="944 -524 1920 1080" enable-background="new 944 -524 1920 1080" xml:space="preserve"%3E%3ClinearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="944" y1="16" x2="2864" y2="16" gradientTransform="matrix%281 0 0 -1 0 32%29"%3E%3Cstop offset="0" style="stop-color:%230B081B"/%3E%3Cstop offset="1" style="stop-color:%2302000E"/%3E%3C/linearGradient%3E%3Crect x="944" y="-524" fill="url%28%23SVGID_1_%29" width="1920" height="1080"/%3E%3ClinearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1154" y1="766" x2="2654" y2="-734" gradientTransform="matrix%281 0 0 -1 0 32%29"%3E%3Cstop offset="0" style="stop-color:%23512DA8"/%3E%3Cstop offset="1" style="stop-color:%23512DA8;stop-opacity:0"/%3E%3C/linearGradient%3E%3Crect x="944" y="-524" opacity="0.1" fill="url%28%23SVGID_2_%29" enable-background="new " width="1920" height="1080"/%3E%3Cpath opacity="0.1" fill="%23201A36" enable-background="new " d="M944-275.046c315.842,191.686,631.216,383.837,946.12,575.989 c13.303,8.077,22.33,9.027,36.108,0.475C2238.508,110.763,2551.251-79.423,2864-269.15V-524H944V-275.046z"/%3E%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  background-attachment: fixed;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: url('noise.png');
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.btn {
+  min-width: 4rem;
+  text-decoration: none;
+  color: #e2e2e2;
+  border: 1px solid #5a35c7;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1px;
+  transition: border 0.5s;
+}
+
+.btn:hover {
+  border: 1px solid #e2e2e2;
+}
+
+.icon-download {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('data:image/svg+xml,%3Csvg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve"%3E%3Cg%3E%3Cg%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" fill="%23FFFFFF" d="M4,20h15v-1H4V20z M19.277,12.416l-0.555-0.832L12,16.066V3.5h-1 v12.566l-6.723-4.482l-0.555,0.832l7.777,5.185L19.277,12.416z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A');
+  margin-right: 0.25em;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  margin: 0.5rem;
+}
+
+.hero-uiux {
+  margin-top: 0.3em;
+  margin-left: 0.2em;
+  font-size: 7.5rem;
+  line-height: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.hero-expert {
+  font-size: 5.5rem;
+  line-height: 6rem;
+  font-weight: 100;
+  letter-spacing: 0.11em;
+  text-transform: lowercase;
+}
+
+.bottom-links {
+  align-self: flex-end;
+}
+
+.bottom-links a {
+  text-decoration: none;
+  color: #e2e2e2;
+  margin: 0.5rem;
+  font-size: 18px;
+}
+
+.hexagon-icon {
+  width: 42px;
+  height: 48px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('data:image/svg+xml,%3Csvg version="1.1" xmlns="http://www.w3.org/2000/svg" width="42" height="48" viewbox="0 0 42 48"%3E%3Cpath fill="none" stroke="%23523ac7" d="M21 0L42 12L42 36L21 48L0 36L0 12Z"%3E%3C/path%3E%3C/svg%3E');
+  transition: background 0.5s;
+}
+.hexagon-icon:hover {
+  background-image: url('data:image/svg+xml,%3Csvg version="1.1" xmlns="http://www.w3.org/2000/svg" width="42" height="48" viewbox="0 0 42 48"%3E%3Cpath fill="none" stroke="%23fff" d="M21 0L42 12L42 36L21 48L0 36L0 12Z"%3E%3C/path%3E%3C/svg%3E');
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+  .bottom-links {
+    align-self: center;
+  }
+}
+
