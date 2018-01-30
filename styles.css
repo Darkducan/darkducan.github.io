@@ -34,7 +34,6 @@ body {
   justify-content: space-between;
   padding: 2rem;
   background: url('noise.png');
-  flex: 1 0 0;
 }
 
 .top-bar {
