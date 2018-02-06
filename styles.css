@@ -48,6 +48,18 @@ body {
   flex-grow: 1;
 }
 
+.navi {
+  text-decoration: none;
+  color: #e2e2e2;
+  border-bottom: 1px solid #5a35c7;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1px;
+  transition: border 0.5s;
+  margin: 0.5rem;
+}
+
 .btn {
   min-width: 4rem;
   text-decoration: none;
