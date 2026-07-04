@@ -1,0 +1,20 @@
+{{ $p := . }}
+<a class="card" href="{{ $p.Permalink }}">
+  <div class="thumb">
+    {{ with $p.Params.cover }}
+      <img src="{{ . | absURL }}" alt="">
+    {{ end }}
+    <div class="dims mono">{{ if $p.Params.dimensions }}{{ $p.Params.dimensions }}{{ else }}1600 × 900{{ end }}</div>
+  </div>
+  <div class="handle h-tl"></div><div class="handle h-tr"></div>
+  <div class="handle h-bl"></div><div class="handle h-br"></div>
+  <div class="card-body">
+    {{ with $p.Params.tag }}<span class="tag">{{ . }}</span>{{ end }}
+    <h4>{{ $p.Title }}</h4>
+    <p>{{ if $p.Params.excerpt }}{{ $p.Params.excerpt }}{{ else }}{{ $p.Summary | plainify | truncate 120 }}{{ end }}</p>
+    <div class="card-meta">
+      <span>{{ $p.Date.Format "Jan 2006" }}</span>
+      <span class="read">Read →</span>
+    </div>
+  </div>
+</a>

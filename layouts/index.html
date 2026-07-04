@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Frame — Index</div>
+    <h1>Interfaces,<br>inspected <em>closely.</em></h1>
+    <p class="sub">{{ .Site.Params.description }}</p>
+    <div class="hero-actions">
+      {{ $posts := where .Site.RegularPages "Section" "posts" }}
+      {{ with index $posts 0 }}
+        <a href="{{ .Permalink }}" class="btn btn-primary">Read the latest</a>
+      {{ end }}
+      <a href="{{ "/index.xml" | absURL }}" class="btn btn-ghost">Subscribe</a>
+    </div>
+  </div>
+</div>
+
+<div class="canvas-section">
+  <div class="wrap">
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $posts = $posts.ByDate.Reverse }}
+    <div class="section-head">
+      <h2 class="section-title">Latest frames</h2>
+      <span class="section-count mono">{{ len $posts }} published</span>
+    </div>
+    {{ if $posts }}
+      <div class="grid">
+        {{ range $posts }}
+          {{ partial "card.html" . }}
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="empty">No frames published yet — write your first post in /admin.</p>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="wrap">
+  <article class="post">
+    <a href="{{ "/" | absURL }}" class="post-back">← Back to index</a>
+    {{ with .Params.cover }}
+      <div class="post-cover"><img src="{{ . | absURL }}" alt=""></div>
+    {{ end }}
+    {{ with .Params.tag }}<span class="tag">{{ . }}</span>{{ end }}
+    <h1>{{ .Title }}</h1>
+    <div class="post-meta">
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+      {{ if .Params.tag }}<span>{{ .Params.tag }}</span>{{ end }}
+    </div>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+{{ end }}

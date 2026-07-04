@@ -1,0 +1,19 @@
+baseURL = 'https://uiux.expert/'
+languageCode = 'en-us'
+title = 'ui/ux.expert'
+theme = ''
+paginate = 9
+enableRobotsTXT = true
+
+[params]
+  description = "Notes on UI and UX craft, taken apart and measured. Updated monthly."
+  author = "Olga Poliakova"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses = false
+
+[taxonomies]
+  tag = "tags"

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="wrap" style="padding-top:56px;">
+  <div class="eyebrow">Frame — {{ .Title }}</div>
+  <h1 style="font-size:36px;">{{ .Title }}</h1>
+</div>
+<div class="canvas-section">
+  <div class="wrap">
+    {{ $pages := .Pages }}
+    {{ if $pages }}
+      <div class="grid">
+        {{ range $pages }}
+          {{ partial "card.html" . }}
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="empty">Nothing here yet.</p>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
