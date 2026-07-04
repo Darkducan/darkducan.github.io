@@ -1,7 +1,6 @@
 baseURL = 'https://uiux.expert/'
 languageCode = 'en-us'
 title = 'ui/ux.expert'
-theme = ''
 paginate = 9
 enableRobotsTXT = true
 
