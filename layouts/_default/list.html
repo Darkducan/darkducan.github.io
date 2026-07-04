@@ -8,8 +8,8 @@
     {{ $pages := .Pages }}
     {{ if $pages }}
       <div class="grid">
-        {{ range $pages }}
-          {{ partial "card.html" . }}
+        {{ range $i, $p := $pages }}
+          {{ partial "card.html" (dict "page" $p "i" $i) }}
         {{ end }}
       </div>
     {{ else }}

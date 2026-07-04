@@ -1,8 +1,11 @@
-{{ $p := . }}
+{{ $p := .page }}
+{{ $artClass := printf "art-%d" (add (mod .i 3) 1) }}
 <a class="card" href="{{ $p.Permalink }}">
   <div class="thumb">
     {{ with $p.Params.cover }}
       <img src="{{ . | absURL }}" alt="">
+    {{ else }}
+      <div class="art {{ $artClass }}"><div class="art-grid"></div></div>
     {{ end }}
     <div class="dims mono">{{ if $p.Params.dimensions }}{{ $p.Params.dimensions }}{{ else }}1600 × 900{{ end }}</div>
   </div>
