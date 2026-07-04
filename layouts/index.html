@@ -9,23 +9,6 @@
       {{ with index $posts 0 }}
         <a href="{{ .Permalink }}" class="btn btn-primary">Read the latest</a>
       {{ end }}
-      <a href="{{ "/index.xml" | absURL }}" class="btn btn-ghost">Subscribe</a>
-    </div>
-
-    <div class="diagram">
-      <div class="diagram-bar"><span></span><span></span><span></span></div>
-      <div class="diagram-body">
-        <div class="diagram-frame">
-          <div class="handle-tl"></div><div class="handle-tr"></div>
-          <div class="handle-bl"></div><div class="handle-br"></div>
-          <h3>Every post, taken apart</h3>
-          <p>Screenshots annotated, spacing called out, decisions explained — not just shown.</p>
-          <div class="dimline">
-            <div class="tick"></div><div class="rule"></div><div class="tick"></div>
-          </div>
-          <div class="dimlabel">520 × 148</div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
